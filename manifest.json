@@ -1,0 +1,25 @@
+{
+    "name":"YT Tools",
+    "version":"0.1.0",
+    "description":"3x youtube speed",
+    "permission":["storage","tabs"],
+    "host_permissions":["https://*.youtube.com/*"],
+    "background":{
+        "service_worker":"background.js"
+    },
+    "content_scripts":[
+        {
+            "matched":["https://*.youtube.com/*"],
+            "js":["content.js"]
+        }
+    ],
+    "action":{
+        "default_icon":{
+            "16":"assets/icon.png",
+            "24":"assets/icon.png",
+            "32":"assets/icon.png"
+        },
+        "default_popup":"popup.html"
+    },
+    "manifest_version":3
+}
